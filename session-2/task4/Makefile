@@ -1,13 +1,13 @@
 
 student: student.o main.o
-	gcc student.o main.o -o student
+	gcc student.o main.o -o bin/student
 
-main.o: main.c student.h structure.h
-	gcc -c main.c
+main.o: src/main.c include/student.h include/structure.h
+	gcc -c src/main.c
 
-student.o: student.c student.h structure.h
-	gcc -c student.c
+student.o: src/student.c include/student.h include/structure.h
+	gcc -c src/student.c 
 
 clean:
-	rm student.o main.o student
+	rm student.o main.o bin/student
 	
