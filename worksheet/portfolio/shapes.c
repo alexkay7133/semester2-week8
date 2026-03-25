@@ -58,7 +58,7 @@ bool pointInLine(Point p, Line l) {
 }
 
 bool pointInTriangle(Point p, Triangle t) {
-    if ((p.x == t.p[0].x && p.y == t.p[0].y) && (p.x == t.p[1].x && p.y == t.p[1].y) && (p.x == t.p[2].x && p.y == t.p[2].y)) {
+    if ((p.x == t.p[0].x && p.y == t.p[0].y) || (p.x == t.p[1].x && p.y == t.p[1].y) || (p.x == t.p[2].x && p.y == t.p[2].y)) {
         return true;
     }
     return false;
